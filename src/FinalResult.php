@@ -1,10 +1,9 @@
 <?php
 
 class FinalResult {
-    function results($filePath) {
-        $file = fopen($filePath, "r");
-        $header = fgetcsv($file);
-        $records = [];
+
+
+    private function mapData($file, $header) {
         while(!feof($file)) {
             $row = fgetcsv($file);
             if(count($row) == 16) {
@@ -26,13 +25,25 @@ class FinalResult {
                 $records[] = $record;
             }
         }
-        $records = array_filter($records);
+        return $records;
+    }
+
+
+
+
+    public function results($filePath) {
+        $file = fopen($filePath, "r");
+        $header = fgetcsv($file);
+        $records = $this->mapData($file, $header);
+
+        
+        
         return [
             "filename" => basename($filePath),
             "document" => $file,
             "failure_code" => $header[1],
             "failure_message" => $header[2],
-            "records" => $records
+            "records" => array_filter($records)
         ];
     }
 }
