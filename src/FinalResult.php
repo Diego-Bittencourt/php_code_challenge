@@ -36,7 +36,7 @@ class FinalResult {
         $header = fgetcsv($file);
         $records = $this->mapData($file, $header);
 
-        
+        //if missing file or empty file, throw error or message
         
         return [
             "filename" => basename($filePath),
