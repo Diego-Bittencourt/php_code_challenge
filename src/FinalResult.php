@@ -15,7 +15,7 @@ class FinalResult
                 $endToEndId = !$row[10] && !$row[11] ? 'End to end id missing' : $row[10] . $row[11];
                 $record = [
                     'amount' => [
-                        'currency' => $header[0],
+                        'currency' => $header,
                         'subunits' => (int) ($amount * 100)
                     ],
                     'bank_account_name' => str_replace(' ', '_', strtolower($row[7])),
@@ -53,7 +53,7 @@ class FinalResult
         };
 
 
-        $records = $this->mapData($file, $header);
+        $records = $this->mapData($file, $header[0]);
         
         return [
             'filename' => basename($filePath),
