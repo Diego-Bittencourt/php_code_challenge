@@ -61,7 +61,7 @@ Hope you have a good day.
 Diego 
 
 
-
+===========================================================================================================================
 
 
 This code is an example from a real world scenario that has been modified to protect the source. The code is one file from a large PHP application.
