@@ -8,7 +8,7 @@ class FinalResult
     {
         while(!feof($file)) {
             $row = fgetcsv($file);
-            if(count($row) == 16) {
+            if(count($row) === 16) {
                 $amount = !$row[8] || $row[8] == '0' ? 0 : (float) $row[8];
                 $accountNumber = !$row[6] ? 'Bank account number missing' : (int) $row[6];
                 $branchCode = !$row[2] ? 'Bank branch code missing' : $row[2];
