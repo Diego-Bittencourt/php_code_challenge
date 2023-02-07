@@ -55,6 +55,8 @@ class FinalResult
 
         $records = $this->mapData($file, $header[0]);
         
+        fclose($file);
+
         return [
             'filename' => basename($filePath),
             'document' => $file,
