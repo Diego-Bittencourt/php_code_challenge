@@ -61,7 +61,7 @@ Hope you have a good day.
 Diego 
 
 ----------------------------------------------------------------------------------------
-# Simple code challenge - Original text#
+# Simple code challenge - Original text #
 
 This code is an example from a real world scenario that has been modified to protect the source. The code is one file from a large PHP application.
 
