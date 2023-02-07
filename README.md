@@ -51,7 +51,7 @@ The changes and the reasons why they were made follows below. Each change for th
      [Commit #10] (https://github.com/Diego-Bittencourt/php_code_challenge/commit/48bd9b263279368c6b331e70df768a9676910e85)
 
 11 - Add documentation in comments
-    This Commit
+    [Commit #11] (https://github.com/Diego-Bittencourt/php_code_challenge/commit/5c84a3e5a40dbda174285ff66c9be589c14d8f3a)
 
 
 **Aknowledgements**
@@ -60,9 +60,8 @@ I'm eager to learn and always excited to aquire knowledge and strategies in Soft
 Hope you have a good day.
 Diego 
 
-
-===========================================================================================================================
-
+----------------------------------------------------------------------------------------
+# Simple code challenge - Original text#
 
 This code is an example from a real world scenario that has been modified to protect the source. The code is one file from a large PHP application.
 
