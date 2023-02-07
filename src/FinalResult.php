@@ -35,11 +35,25 @@ class FinalResult
 
     public function results($filePath) 
     {
-        $file = fopen($filePath, 'r');
-        $header = fgetcsv($file);
-        $records = $this->mapData($file, $header);
+        try {
+            $file = fopen($filePath, 'r');
+            if (!$file) {
+                throw new Exception('File not found.');
+            };
+        
+            $header = fgetcsv($file);
+            if(!$header) {
+                throw new Exception('File is empty.');
+            };
+        }
 
-        //if missing file or empty file, throw error or message
+        catch (Exception $error) {
+            //maybe using echo isn't ideal, depending on the architecture of the app/api
+            echo 'Message: ' . $error->getMessage();
+        };
+
+
+        $records = $this->mapData($file, $header);
         
         return [
             'filename' => basename($filePath),
